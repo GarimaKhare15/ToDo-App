@@ -42,12 +42,12 @@
       </div>
       <hr>
       <div class="taskList">
-        <% if(tasks.length==0) { %>
+        <% if(Tasks.length==0) { %>
     
             <p>All the tasks are done..✌✌</p>
       
         <% } else { %>
-        <% for(task of tasks) { %>
+        <% for(task of Tasks) { %>
             <p class="paragraph" ><%= task.description %></p>
             <p class="paragraph" ><%= task.dueDate %> </h3>
             <p class="category"><%= task.category %></p>
