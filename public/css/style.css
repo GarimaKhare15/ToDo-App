@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:url('https://desktime.com/blog/wp-content/uploads/2021/03/feature.png');
+    background-size:cover;
+    color:white;
+}
+
+.container{
+    margin-right: auto; margin-left: auto; width: 800px;
+    text-align: center;
+    background-color: rgba(0, 117, 0,0.7);
+    background-repeat:no-repeat;
+}
+
+input[type=text], input[type=date] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid red;
+  }
+
+  input[type=text]:focus {
+    background-color: lightblue;
+    border:none;
+    outline:none
+  }
