@@ -1,14 +1,17 @@
+//PORT NO
 const PORT = 4000;
+
 const express = require("express");
 const app = express();
+
 const Task = require("./models/taskList");
 const database = require("./config/mongoose");
-//setting ejs as view engine
+
+//SETTING EJS AS VIEW ENGINE
 app.set("view engine", "ejs");
 app.set("views", "./views");
 
-//middleware
-
+//USED ARRAY OF OBJECTS FOR DATA BEFORE USING DATABASE FOR STORING DATA
 /*tasks = [
     {
         description:"abcd",
@@ -23,9 +26,13 @@ app.set("views", "./views");
 ]
 */
 
+//MIDDLEWARES
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
+
+//HOME PAGE
 app.get("/", function (req, res) {
+  //FOR RENDERING TODO LIST
   Task.find({}, function (err, task) {
     if (err) {
       console.log("Error tasks");
@@ -35,6 +42,7 @@ app.get("/", function (req, res) {
   });
 });
 
+//ADDING A NEW TASK TO THE LIST
 app.post("/addTask", function (req, res) {
   Task.create(
     {
@@ -53,6 +61,7 @@ app.post("/addTask", function (req, res) {
   );
 });
 
+//DELETING TASK FROM THE LIST
 app.get('/deleteTask',function(req, res) {
 
   Task.findByIdAndDelete(req.query.id, function(err){
