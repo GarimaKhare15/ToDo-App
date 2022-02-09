@@ -3,5 +3,5 @@ Its a TODO App in which you can add new task and delete the completed task from 
 
 TECHNOLOGIES USED :NODE JS, EXPRESS, EJS, MONGODB, CSS
 
-![Screenshot](screenshot 1.png)
+!(https://github.com/GarimaKhare15/ToDo-App/blob/main/Screenshot%201.png)
 
